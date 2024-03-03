@@ -22,12 +22,111 @@
 
     <main>
         <div class="container">
-            <h1 class="title-main">Barbecue Calculator</h1>
+            <h1 class="title-main">Calculadora de Churrasco</h1>
+
             <form name="fieldForms">
-                <section></section>
-                <section></section>
-                <button type="submit"></button>
+                <p>Insira quantas pessoas irão no churrasco</p>
+                <input type="number" name="guests" id="guests">
+
+                <section class="foods">
+                    <h2>Carnes</h2>
+                    <div class="field-form">
+                        <label for="beef">Bovina</label>
+                        <input type="text" name="beef" id="beef" placeholder="Valor do kg">
+                    </div>
+
+                    <div class="field-form">
+                        <label for="pig-meat">Suína</label>
+                        <input type="text" name="pig-meat" id="pig-meat" placeholder="Valor do kg">
+                    </div>
+
+                    <div class="field-form">
+                        <label for="chicken">Frango</label>
+                        <input type="text" name="chicken" id="chicken" placeholder="Valor do kg">
+                    </div>
+                </section>
+
+                <section class="drinks">
+                    <h2>Bebidas</h2>
+                    <div class="field-form">
+                        <label for="soda">Refrigerante (por litro)</label>
+                        <input type="text" name="soda" id="soda" placeholder="Valor por litro">
+                    </div>
+
+                    <div class="field-form">
+                        <label for="beer">Cerveja (Lata)</label>
+                        <input type="text" name="beer" id="beer" placeholder="Valor por unidade">
+                    </div>
+
+                    <div class="field-form">
+                        <label for="numberPeapleDrinkBeer">N. de Pessoas que Bebem Cerveja</label>
+                        <input type="number" name="numberPeapleDrinkBeer" id="numberPeapleDrinkBeer" placeholder="Número de pessoas">
+                    </div>
+                </section>
+
+                <button type="submit" class="btn-calc" id="calc">
+                    Fazer cálculo
+                </button>
             </form>
+
+            <section class="result-calc" id="result">
+                <h2 class="title-result">Resultado</h2>
+
+                <!--Food result table-->
+                <table class="table-result">
+                    <tr>
+                        <th></th>
+                        <th>Quantidade</th>
+                        <th>Total</th>
+                    </tr>
+                    <tr>
+                        <th>Carne bovina necessária para o churrasco</th>
+                        <td class="response-value" id="unit-quantity-beef"></td>
+                        <td class="response-value" id="value-beef"></td>
+                    </tr>
+                    <tr>
+                        <th>Carne suína necessária para o churrasco</th>
+                        <td class="response-value" id="unit-quantity-pigmeat"></td>
+                        <td class="response-value" id="value-pigmeat"></td>
+                    </tr>
+                    <tr>
+                        <th>Frango necessário para o churrasco</th>
+                        <td class="response-value" id="unit-quantity-chicken"></td>
+                        <td class="response-value" id="value-chicken"></td>
+                    </tr>
+                    <tr>
+                        <th class="total-price">Valor Total</th>
+                        <td class="response-value" id="unit-quantity-food"></td>
+                        <td class="response-value" id="value-total-food"></td>
+                    </tr>
+                </table>
+
+                <!--Drink result table-->
+                <table class="table-result">
+                    <tr>
+                        <th></th>
+                        <th>Quantidade</th>
+                        <th>Total</th>
+                    </tr>
+                    <tr>
+                        <th>Quantidade de Refrigerante</th>
+                        <td class="response-value" id="unit-quantity-soda"></td>
+                        <td class="response-value" id="value-soda"></td>
+                    </tr>
+                    <tr>
+                        <th>Quantidade de Cerveja</th>
+                        <td class="response-value" id="unit-quantity-beer"></td>
+                        <td class="response-value" id="value-beer"></td>
+                    </tr>
+                    <tr>
+                        <th>Valor Total</th>
+                        <td></td>
+                        <td class="response-value" id="value-total-drink"></td>
+                    </tr>
+                </table>
+
+            </section>
+
         </div>
     </main>
 
