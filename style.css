@@ -1,3 +1,174 @@
+:root{
+    --purple-dark: #382194;
+    --purple-light: #5840ba;
+    --text-color: #646363;
+    --bg-gray: #f6f6f7;
+}
+
 * {
     font-family: "Inter", sans-serif;
+    box-sizing: border-box;
 }
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+ main {
+    min-height: 100vh;
+    background-color: var(--bg-gray);
+    padding: 30px 0;
+ }
+
+ .container {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin-inline: auto;
+ }
+
+ /*Header*/
+ .header {
+    background-color: var(--purple-dark);
+    padding: 15px 0;
+ }
+ .logo{
+    font-size: 20px;
+    font-weight: 900;
+    color: #fff;
+ }
+
+ /*Main Content*/
+.title-main{
+    color: var(--purple-dark);
+    text-align: center;
+    font-weight: 900;
+    margin: 0;
+}
+
+.number-people-informed{
+    color: var(--text-color);
+    text-align: center;
+}
+
+input[name="guests"] {
+    display: block;
+    margin-inline: auto;
+}
+
+input{
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+input:focus{
+    border-color: #979797;
+    outline: none;
+}
+
+.food-drink-sections, .response-field{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    gap: 50px;
+    padding: 30px 0;
+}
+
+.food-drink-sections section{
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.food-drink-sections h2{
+    text-align: center;
+    color: var(--purple-light);
+    font-weight: 900;
+}
+
+.field-form{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;    
+}
+
+.field-form input{
+    max-width: 130px;
+}
+
+.field-form label{
+    font-size: .8rem;
+    color: var(--text-color);
+}
+
+.btn-calc{
+    all: unset;
+    margin: 20px auto;
+    display: block;
+    background-color: var(--purple-light);
+    color: #fff;
+    padding: 10px 40px;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.btn-calc:hover{
+    transform: scale(1.03);
+}
+
+/*Result*/
+.result-calc{
+    margin: 50px 0;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.response-field{
+    align-items: baseline;
+}
+
+.title-result{
+    padding: 20px 0;
+    text-align: center;
+    color: var(--purple-light);
+    font-weight: 900;
+}
+
+.table-result{
+    width: 100%;
+    padding: 10px;
+    border-spacing: 0 10px;
+}
+
+.table-result tr:nth-child(even){
+    background-color: var(--bg-gray);
+}
+.table-result th, .table-result td{
+    color: var(--text-color);
+    font-weight: 400;
+    text-align: start;
+    padding: 10px;
+}
+
+.table-result .response-value{
+    font-weight: 700;
+}
+
+
+ /*Footer*/
+ .footer {
+    background-color: var(--purple-dark);
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+ }
+ .footer p {
+    margin: 0;
+ }
+ .footer a{
+    color: #fff;
+ }
